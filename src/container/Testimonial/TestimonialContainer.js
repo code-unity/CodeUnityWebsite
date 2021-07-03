@@ -24,7 +24,7 @@ const TestimonialContainer = ({ classOption }) => {
 
                 <Swiper className="testimonial-slider" data-aos="fade-up" data-aos-delay="300"
                 spaceBetween={10}
-                slidesPerView={3}
+                slidesPerView={2}
                 centeredSlides
                 autoplay={{
                     delay: 3000,

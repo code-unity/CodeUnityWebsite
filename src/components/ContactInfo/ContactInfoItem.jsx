@@ -16,10 +16,32 @@ const ContactInfoItem = ({data}) => {
                     }}
                 />
             </div>
+            {data.title=="Give Us A Call" &&
+            <a href="tel:+919030656522">
+                <div className="info" >
+                    <h4 className="title">{data.title}</h4>
+                    <span className="info-text" >{data.info}</span>
+                </div>
+            </a>
+            }
+            {data.title == "Help Desk" &&
+            <a href = "mailto: admin@codeunity.co">
+                <div className="info">
+                    <h4 className="title">{data.title}</h4>
+                    <span className="info-text" dangerouslySetInnerHTML={{__html: data.info}}/>
+                </div>
+            </a>
+            }
+            {data.title == "Our Locations" &&
             <div className="info">
-                <h4 className="title">{data.title}</h4>
-                <span className="info-text" dangerouslySetInnerHTML={{__html: data.info}}/>
+               <h4 className="title">{data.title}</h4>
+               <span className="info-text" dangerouslySetInnerHTML={{__html: data.info}}/>
             </div>
+
+            }
+            
+            
+            
         </div>
     )
 }

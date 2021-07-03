@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+//import {Link} from "react-router-dom";
 import Logo from '../../components/logo/Logo';
 import FooterData from '../../data/Footer/footerItem.json';
 import FooterLinkItem from '../../components/Footer/FooterLinkItem.jsx';
@@ -21,8 +21,8 @@ const Footer = () => {
                                 <div className="content">
 
 
-                                    <p><Link to={process.env.PUBLIC_URL + "/"}>(+91) 9030656522</Link></p>
-                                    <p><Link to={process.env.PUBLIC_URL + "/"}>admin@codeunity.co</Link> </p>
+                                    <p><a href="tel: +919030656522">(+91) 9030656522</a></p>
+                                    <p><a href="mailto: admin@codeunity.co">admin@codeunity.co</a></p>
                                 </div>
                                 <div className="footer-social-inline">
                                     <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter-square"></i></a>
