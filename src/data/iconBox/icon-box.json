@@ -1,0 +1,27 @@
+[
+    {
+        "id": "1",
+        "icon": "images/svg/linea/linea-basic-webpage-img-txt.svg",
+        "title": "Web Development",
+        "desc": "Our developers who are proficient in ReactJS , AngularJS and VueJS, provide a range of services to the global clients. Our full stack programmers can efficiently engineer your web solution for implementation into your existing business model.",
+        "pageLink": "Learn More",
+        "link": "service"
+    },
+    {
+        "id": "2",
+        "icon": "images/svg/linea/linea-basic-picture-multiple.svg",
+        "title": "UX Design",
+        "desc": "Everything we do stems from a brand’s agenda. In our 1 year existence, we have worked with brands from over 15 sectors, crafting creative solutions that give your brand the drama it requires to engage, compete, and thrive.",
+        "pageLink": "Learn More",
+        "link": "service"
+    },
+    {
+        "id": "3",
+        "icon": "images/svg/linea/linea-basic-smartphone.svg",
+        "title": "Android App Development",
+        "desc": "Our team of Android Application developers are experts in developing fully-functional and secure mobile applications which can be customized as per customer requirements.",
+        "pageLink": "Learn More",
+        "link": "service"
+    }
+    
+]

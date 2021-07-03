@@ -1,0 +1,55 @@
+[
+    {
+        "id": 1,
+        "title": "Services",
+        "list": [
+            {
+            "id": 1,
+            "text": "Web development",
+            "url": "/service"
+            },
+            {
+            "id": 2,
+            "text": "UX design",
+            "url": "/service"
+            },
+            {
+            "id": 3,
+            "text": "Android App Development",
+            "url": "/service"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "About",
+        "list": [
+            {
+            "id": 1,
+            "text": "About us",
+            "url": "/about"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Contact",
+        "list": [
+            {
+            "id": 1,
+            "text": "Support",
+            "url": "/contact"
+            },
+            {
+            "id": 2,
+            "text": "Help Desk",
+            "url": "/contact"
+            },
+            {
+            "id": 3,
+            "text": "Location",
+            "url": "/contact"
+            }
+        ]
+    }
+]

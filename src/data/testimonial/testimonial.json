@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "image": "images/testimonial/90/ranjith.png",
+        "name": "Ranjith Koneri",
+        "position": "CTO & Co Founder"
+        
+    },
+    {
+        "id": 2,
+        "image": "images/testimonial/90/Yaswanth.png",
+        "name": "Yaswanth Koneri",
+        "position": "Founder"
+        
+    },
+    {
+        "id": 3,
+        "image": "images/testimonial/90/Faisal.png",
+        "name": "Faisal Ali",
+        "position": "COO & Co Founder"
+    }
+    
+]
