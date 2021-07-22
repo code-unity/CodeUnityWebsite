@@ -34,6 +34,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "prod": "npm run build; node server.js",
     "start": "set PORT=3000 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
