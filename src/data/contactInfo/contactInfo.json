@@ -1,20 +1,20 @@
 [
     {
-    "id": "1",
-    "icon": "images/svg/linea/linea-basic-map.svg",
-    "title": "Our Locations",
-    "info": " 1-32 Brahmin street Nagari, Andhra Pradesh."
+        "id": "1",
+        "icon": "images/svg/linea/linea-basic-map.svg",
+        "title": "Our Locations",
+        "info": " 6, 2nd st, Varasakthi nagar, Kasthuri Nagar, Kolathur, Chennai, TN - 600099"
     },
     {
-    "id": "2",
-    "icon": "images/svg/linea/linea-basic-message-txt.svg",
-    "title": "Give Us A Call",
-    "info": "(+91) 9030656522"
+        "id": "2",
+        "icon": "images/svg/linea/linea-basic-message-txt.svg",
+        "title": "Give Us A Call",
+        "info": "(+91) 9840572927"
     },
     {
-    "id": "3",
-    "icon": "images/svg/linea/linea-basic-mail-open-text.svg",
-    "title": "Help Desk",
-    "info": "admin@codeunity.co"
+        "id": "3",
+        "icon": "images/svg/linea/linea-basic-mail-open-text.svg",
+        "title": "Help Desk",
+        "info": "admin@codeunity.in"
     }
 ]
