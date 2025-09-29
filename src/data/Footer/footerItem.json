@@ -51,5 +51,17 @@
             "url": "/contact"
             }
         ]
+    },
+    {
+        "id": 4,
+        "title": "Friends",
+        "list": [
+            {
+            "id": 1,
+            "text": "ToolGenie",
+            "url": "https://toolgenie.org/",
+            "external": true
+            }
+        ]
     }
 ]

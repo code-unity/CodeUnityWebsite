@@ -10,7 +10,15 @@ const FooterLinkItem = ({data}) => {
                 <ul>
                     {data.list.map((single,key) =>(
                         <li key={key}>
-                            <Link to={single.url}>{single.text} {single?.badge && <span className="ft-badge">{single.badge}</span>} </Link>
+                            {single.external ? (
+                                <a href={single.url} target="_blank" rel="noopener noreferrer">
+                                    {single.text} {single?.badge && <span className="ft-badge">{single.badge}</span>}
+                                </a>
+                            ) : (
+                                <Link to={single.url}>
+                                    {single.text} {single?.badge && <span className="ft-badge">{single.badge}</span>}
+                                </Link>
+                            )}
                         </li>
                     ))}
                     
