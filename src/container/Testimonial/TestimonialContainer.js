@@ -3,13 +3,10 @@ import React from 'react';
 import TestimonialData from '../../data/testimonial/testimonial.json'
 import Testimonial from '../../components/Testimonial/Testimonial.jsx';
 import SectionTitle from '../../components/SectionTitles/ContactSectionTitle';
-import SwiperCore, { Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.scss';
-import 'swiper/components/pagination/pagination.scss';
-
-SwiperCore.use([ Pagination ]);
-SwiperCore.use([Autoplay]);
+import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const TestimonialContainer = ({ classOption }) => {
     
@@ -22,7 +19,9 @@ const TestimonialContainer = ({ classOption }) => {
                     // subTitle="Get your company heading in the right direction with our professional developers"
                 />
 
-                <Swiper className="testimonial-slider" data-aos="fade-up" data-aos-delay="300"
+                <Swiper 
+                modules={[Pagination, Autoplay]}
+                className="testimonial-slider" data-aos="fade-up" data-aos-delay="300"
                 spaceBetween={10}
                 slidesPerView={2}
                 centeredSlides

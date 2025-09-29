@@ -3,7 +3,7 @@ import React from 'react';
 import BrandData from '../../data/brand/brand.json';
 import Brand from '../../components/Brand/Brand.jsx';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.scss';
+import 'swiper/css';
 
 const BrandContainer = ({ classOption }) => {
     return (

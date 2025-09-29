@@ -2,11 +2,9 @@ import React from 'react';
 import IntroData from '../../data/intro/intro.json';
 import Intro from '../../components/Intro/Intro.jsx';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation } from 'swiper';
-import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
-
-SwiperCore.use([Navigation]);
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const IntroSlider =  () => {
     const swiperOption = {
@@ -25,7 +23,10 @@ const IntroSlider =  () => {
     }
     return (
         <div className="intro-slider-wrap section">
-        <Swiper effect="fade" className="intro-slider"
+        <Swiper 
+            modules={[Navigation]}
+            effect="fade" 
+            className="intro-slider"
             {...swiperOption}
         >
             {IntroData &&
