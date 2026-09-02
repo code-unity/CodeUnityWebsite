@@ -37,6 +37,7 @@
     "prod": "npm run build; node server.js",
     "start": "set PORT=3000 && react-scripts start",
     "build": "react-scripts build",
+    "vercel-build": "CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ignore-path .gitignore . --ext js --ext jsx",
@@ -49,7 +50,7 @@
     ]
   },
   "engines": {
-    "node": ">=22.0.0",
+    "node": "22.x",
     "npm": ">=10.0.0"
   },
   "browserslist": {

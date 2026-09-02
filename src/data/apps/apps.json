@@ -92,14 +92,14 @@
     {
         "id": 7,
         "slug": "islam",
-        "name": "Best Islam App!",
+        "name": "Islam - Prayer Times & Qibla",
         "tagline": "Prayer times, Qibla and duas",
         "desc": "Accurate prayer times, a Qibla compass, the Hijri calendar, duas and a home-screen countdown widget. No ads and no accounts.",
         "platform": "iPhone · iPad",
         "category": "Lifestyle",
         "price": "Free",
         "icon": "/images/apps/islam.jpg",
-        "storeUrl": "https://apps.apple.com/us/app/best-islam-app/id6759438989",
+        "storeUrl": "https://apps.apple.com/app/id6759438989",
         "storeLabel": "App Store",
         "siteUrl": null,
         "featured": false
