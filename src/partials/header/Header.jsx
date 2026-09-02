@@ -53,7 +53,7 @@ const Header = () => {
                                 </div> */}
 
                                 <div className="header-mobile-menu-toggle d-xl-none ml-sm-2">
-                                    <button type="button" className="toggle" onClick={onCanvasHandler}>
+                                    <button type="button" className="toggle" data-analytics-label="Open mobile menu" onClick={onCanvasHandler}>
                                         <i className="icon-top"></i>
                                         <i className="icon-middle"></i>
                                         <i className="icon-bottom"></i>

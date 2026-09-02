@@ -12,7 +12,7 @@ const MobileMenu = ({show, onClose}) => {
                     <Logo image={process.env.PUBLIC_URL + "/images/logo/logo.png"}/>
                 </div>
                 <div className="mobile-menu-close">
-                    <button className="toggle" onClick={onClose}>
+                    <button className="toggle" data-analytics-label="Close mobile menu" onClick={onClose}>
                         <i className="icon-top"></i>
                         <i className="icon-bottom"></i>
                     </button>
