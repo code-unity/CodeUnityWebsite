@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import PagesSEO from "../../data/seo/pages.json";
+import AppsData from "../../data/apps/apps.json";
 import {
     initAnalytics,
     trackPageView,
@@ -57,6 +59,28 @@ function resolveArea(element) {
 }
 
 /**
+ * Resolve the page title from the same data the SEO component reads.
+ *
+ * document.title is only the fallback: react-helmet-async applies the title in
+ * its own effect, which is not ordered against this one, so reading it here can
+ * catch the previous page's title. These two files are the source the SEO
+ * component and the build-time injector both use, so reading them directly is
+ * deterministic and keeps GA4 in step with what a crawler sees.
+ */
+function resolveTitle(pathname) {
+    const page = PagesSEO[pathname];
+    if (page && page.title) return page.title;
+
+    const appMatch = pathname.match(/^\/apps\/([a-z0-9-]+)$/);
+    if (appMatch) {
+        const app = AppsData.find((item) => item.slug === appMatch[1]);
+        if (app && app.seoTitle) return `${app.seoTitle} | CodeUnity`;
+    }
+
+    return document.title;
+}
+
+/**
  * Best-effort visible label for an element: its own text, else an explicit
  * analytics label, else an accessible name, else the icon class. Keeps
  * icon-only buttons (social links, menu toggle) from reporting as blank.
@@ -94,17 +118,12 @@ const Analytics = () => {
         initAnalytics();
     }, []);
 
-    // One page_view per route change. The title is read after a tick so
-    // react-helmet has had a chance to swap it in.
+    // One page_view per route change, with the scroll-depth counters reset so
+    // each page reports its own depths.
     useEffect(() => {
         pathRef.current = location.pathname;
         firedDepths.current = new Set();
-
-        const timer = window.setTimeout(() => {
-            trackPageView(location.pathname, document.title);
-        }, 60);
-
-        return () => window.clearTimeout(timer);
+        trackPageView(location.pathname, resolveTitle(location.pathname));
     }, [location.pathname]);
 
     // Delegated click tracking for every link and button on the site.
