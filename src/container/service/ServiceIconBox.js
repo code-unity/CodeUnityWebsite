@@ -10,7 +10,7 @@ const ServiceIconBox = ({ classOption }) => {
             <div className="container">
 
                 <SectionTitle
-                    title="EXPLORE OUR OFFRERINGS"
+                    title="EXPLORE OUR OFFERINGS"
                     subTitle="Get your company heading in the right direction with our technical services"
                 />
 

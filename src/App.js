@@ -7,6 +7,7 @@ import HomeTwo from './pages/HomeTwo';
 import HomeThree from './pages/HomeThree';
 import About from './pages/About';
 import Service from './pages/Service';
+import Apps from './pages/Apps';
 import Work from './pages/Work';
 import WorkDetails from './pages/WorkDetails';
 import BlogGrid from './pages/BlogGrid';
@@ -20,6 +21,7 @@ import Contact from './pages/Contact';
 import "aos/dist/aos.css";
 import 'react-modal-video/scss/modal-video.scss';
 import './assets/scss/style.scss';
+import './assets/css/apps.css';
 
 
 function App() {
@@ -41,6 +43,7 @@ function App() {
               <Route path={`${process.env.PUBLIC_URL + "/home-one"}`} element={<HomeOne/>}/>
               <Route path={`${process.env.PUBLIC_URL + "/home-two"}`} element={<HomeTwo/>}/>
               <Route path={`${process.env.PUBLIC_URL + "/home-three"}`} element={<HomeThree/>}/>
+              <Route path={`${process.env.PUBLIC_URL + "/apps"}`} element={<Apps />} />
               <Route path={`${process.env.PUBLIC_URL + "/about"}`} element={<About />} />
               <Route path={`${process.env.PUBLIC_URL + "/service"}`} element={<Service />} />
               <Route path={`${process.env.PUBLIC_URL + "/work"}`} element={<Work />} />

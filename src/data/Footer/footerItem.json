@@ -1,6 +1,35 @@
 [
     {
         "id": 1,
+        "title": "Apps",
+        "list": [
+            {
+            "id": 1,
+            "text": "Pocket AI",
+            "url": "https://mypocketai.app/",
+            "external": true
+            },
+            {
+            "id": 2,
+            "text": "LLM Radar",
+            "url": "https://llm-radar-eta.vercel.app/",
+            "external": true
+            },
+            {
+            "id": 3,
+            "text": "ToolGenie",
+            "url": "https://toolgenie.org/",
+            "external": true
+            },
+            {
+            "id": 4,
+            "text": "All apps",
+            "url": "/apps"
+            }
+        ]
+    },
+    {
+        "id": 2,
         "title": "Services",
         "list": [
             {
@@ -15,13 +44,13 @@
             },
             {
             "id": 3,
-            "text": "Android App Development",
+            "text": "App development",
             "url": "/service"
             }
         ]
     },
     {
-        "id": 2,
+        "id": 3,
         "title": "About",
         "list": [
             {
@@ -32,7 +61,7 @@
         ]
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "Contact",
         "list": [
             {
@@ -49,18 +78,6 @@
             "id": 3,
             "text": "Location",
             "url": "/contact"
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "title": "Friends",
-        "list": [
-            {
-            "id": 1,
-            "text": "ToolGenie",
-            "url": "https://toolgenie.org/",
-            "external": true
             }
         ]
     }
