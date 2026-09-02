@@ -8,6 +8,7 @@ import HomeThree from './pages/HomeThree';
 import About from './pages/About';
 import Service from './pages/Service';
 import Apps from './pages/Apps';
+import AppDetails from './pages/AppDetails';
 import Work from './pages/Work';
 import WorkDetails from './pages/WorkDetails';
 import BlogGrid from './pages/BlogGrid';
@@ -44,6 +45,7 @@ function App() {
               <Route path={`${process.env.PUBLIC_URL + "/home-two"}`} element={<HomeTwo/>}/>
               <Route path={`${process.env.PUBLIC_URL + "/home-three"}`} element={<HomeThree/>}/>
               <Route path={`${process.env.PUBLIC_URL + "/apps"}`} element={<Apps />} />
+              <Route path={`${process.env.PUBLIC_URL + "/apps/:slug"}`} element={<AppDetails />} />
               <Route path={`${process.env.PUBLIC_URL + "/about"}`} element={<About />} />
               <Route path={`${process.env.PUBLIC_URL + "/service"}`} element={<Service />} />
               <Route path={`${process.env.PUBLIC_URL + "/work"}`} element={<Work />} />

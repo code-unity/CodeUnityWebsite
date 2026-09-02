@@ -18,10 +18,7 @@ import ScrollToTop from '../components/ScrollToTop.jsx';
 const HomeOne = () => {
     return (
         <React.Fragment>
-            <SEO
-                title="CodeUnity — Apps for iPhone, Mac and the web"
-                description="CodeUnity builds small, focused apps — Pocket AI for offline on-device chat, LLM Radar for local AI on the Mac, ToolGenie for free browser tools, and more. Download them all here."
-            />
+            <SEO path="/" />
             <Header />
             <IntroSlider />
             {/* Apps come first: they are what the studio is known for. */}

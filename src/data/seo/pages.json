@@ -1,0 +1,33 @@
+{
+    "/": {
+        "title": "CodeUnity | Apps for iPhone, Mac and the Web",
+        "description": "CodeUnity is a small studio building focused apps: Pocket AI for offline on-device chat, LLM Radar for local AI on the Mac, ToolGenie for free browser tools, and more.",
+        "heading": "Apps for iPhone, Mac and the web"
+    },
+    "/apps": {
+        "title": "Apps by CodeUnity | Pocket AI, LLM Radar, ToolGenie",
+        "description": "Every app CodeUnity has shipped for iPhone, Mac and the web - Pocket AI, LLM Radar, ToolGenie, White Noise, Biology AI, Sokoban Toybox and Islam. Download links in one place.",
+        "heading": "Every app we have shipped, in one place"
+    },
+    "/about": {
+        "title": "About CodeUnity | Independent App Studio",
+        "description": "CodeUnity is an independent software studio. We build small, private, no-nonsense apps for iPhone, Mac and the web, and take on selected consulting work.",
+        "heading": "About CodeUnity"
+    },
+    "/service": {
+        "title": "App Development & Software Consulting | CodeUnity",
+        "description": "CodeUnity takes on iOS, macOS and web software consulting: product design, app development, on-device AI integration and shipping to the App Store.",
+        "heading": "What CodeUnity can build for you"
+    },
+    "/contact": {
+        "title": "Contact CodeUnity",
+        "description": "Get in touch with CodeUnity about an app, a bug report, or a software consulting project. We reply to every message.",
+        "heading": "Contact CodeUnity"
+    },
+    "/home-one": { "title": "CodeUnity", "description": "CodeUnity builds small, focused apps for iPhone, Mac and the web.", "noindex": true, "canonical": "/" },
+    "/home-two": { "title": "CodeUnity", "description": "CodeUnity builds small, focused apps for iPhone, Mac and the web.", "noindex": true, "canonical": "/" },
+    "/home-three": { "title": "CodeUnity", "description": "CodeUnity builds small, focused apps for iPhone, Mac and the web.", "noindex": true, "canonical": "/" },
+    "/work": { "title": "Work | CodeUnity", "description": "Selected CodeUnity work.", "noindex": true },
+    "/blog-grid": { "title": "Blog | CodeUnity", "description": "Notes from the CodeUnity studio.", "noindex": true },
+    "/blog-classic": { "title": "Blog | CodeUnity", "description": "Notes from the CodeUnity studio.", "noindex": true }
+}

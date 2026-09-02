@@ -15,7 +15,7 @@ import ScrollToTop from "../components/ScrollToTop.jsx";
 const AboutUs = () => {
   return (
     <React.Fragment>
-      <SEO title="About - CodeUnity" />
+      <SEO path="/about" />
       <Header />
       <Breadcrumb
         image="images/bg/breadcrumb-bg.jpg"

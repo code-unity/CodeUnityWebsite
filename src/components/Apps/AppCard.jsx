@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from 'react';
+import {Link} from "react-router-dom";
 
 // Fallback tile for products that have no store artwork (LLM Radar, ToolGenie).
 const initialsOf = (name) => name.replace(/[^A-Za-z ]/g, '').split(' ').filter(Boolean).slice(0, 2).map(w => w[0].toUpperCase()).join('');
@@ -13,7 +14,7 @@ const AppCard = ({ data }) => {
                     : <span className="app-card__icon app-card__icon--text" aria-hidden="true">{initialsOf(data.name)}</span>
                 }
                 <div className="app-card__heading">
-                    <h3 className="app-card__title">{data.name}</h3>
+                    <h3 className="app-card__title"><Link to={process.env.PUBLIC_URL + `/apps/${data.slug}`}>{data.name}</Link></h3>
                     <p className="app-card__tagline">{data.tagline}</p>
                 </div>
             </div>
@@ -30,11 +31,9 @@ const AppCard = ({ data }) => {
                 <a className="app-card__btn" href={data.storeUrl} target="_blank" rel="noopener noreferrer">
                     {data.storeLabel}
                 </a>
-                {data.siteUrl && (
-                    <a className="app-card__link" href={data.siteUrl} target="_blank" rel="noopener noreferrer">
-                        Website
-                    </a>
-                )}
+                <Link className="app-card__link" to={process.env.PUBLIC_URL + `/apps/${data.slug}`}>
+                    Learn more
+                </Link>
             </div>
         </div>
     )
