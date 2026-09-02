@@ -1,9 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": "CI=false react-scripts build && node scripts/seo-postbuild.js",
+  "buildCommand": "npm run vercel-build",
   "outputDirectory": "build",
-  "installCommand": "npm install",
   "trailingSlash": false,
   "redirects": [
     {
