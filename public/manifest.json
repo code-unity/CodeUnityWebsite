@@ -1,15 +1,25 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "CodeUnity",
+  "name": "CodeUnity - Apps for iPhone, Mac and the web",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "32x32",
-      "type": "image/png"
+      "sizes": "16x16 32x32 48x48 64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#01a0ae",
   "background_color": "#ffffff"
 }
