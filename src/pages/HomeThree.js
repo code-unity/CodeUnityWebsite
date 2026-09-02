@@ -24,7 +24,7 @@ import ScrollToTop from '../components/ScrollToTop.jsx';
 const HomeThree = () => {
     return (
         <React.Fragment>
-            <SEO title="Exomac || Home Three" />
+            <SEO path="/home-three" />
             <Header />
             <IntroThree />
             <HomeAboutThree />

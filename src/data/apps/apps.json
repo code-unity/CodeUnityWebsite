@@ -12,7 +12,27 @@
         "storeUrl": "https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702",
         "storeLabel": "App Store",
         "siteUrl": "https://mypocketai.app/",
-        "featured": true
+        "featured": true,
+        "seoTitle": "Pocket AI — Offline AI Chat for iPhone",
+        "seoDescription": "Run Qwen, Llama, DeepSeek and Mistral entirely on your iPhone. No internet, no account, no servers — your chats never leave the device. Free on the App Store.",
+        "features": [
+            {
+                "title": "Open models, on the device",
+                "text": "Qwen, Llama, DeepSeek, Mistral, Phi and Gemma all run on the iPhone itself."
+            },
+            {
+                "title": "Works with no internet",
+                "text": "There are no servers to call, so the app keeps working in airplane mode."
+            },
+            {
+                "title": "No account, no sign-up",
+                "text": "Nothing to register. Your conversations never leave the device."
+            },
+            {
+                "title": "Free, with a lifetime unlock",
+                "text": "Free to use. Pro is a one-time lifetime purchase at $4.99, not a subscription."
+            }
+        ]
     },
     {
         "id": 2,
@@ -27,7 +47,27 @@
         "storeUrl": "https://llm-radar-eta.vercel.app/",
         "storeLabel": "Get LLM Radar",
         "siteUrl": null,
-        "featured": true
+        "featured": true,
+        "seoTitle": "LLM Radar — Activity Monitor for Local AI on Mac",
+        "seoDescription": "LLM Radar shows which local-AI runtimes are running on your Mac — Ollama, LM Studio, llama.cpp — which models are loaded, and how much RAM and disk they use.",
+        "features": [
+            {
+                "title": "Every local-AI runtime in one window",
+                "text": "Ollama, LM Studio and llama.cpp, side by side."
+            },
+            {
+                "title": "See which models are loaded",
+                "text": "Know what is in memory right now, not just what is installed."
+            },
+            {
+                "title": "Track RAM and disk use",
+                "text": "See how much memory and storage each model is taking."
+            },
+            {
+                "title": "Reclaim the space you are not using",
+                "text": "Find the models you never load and remove them."
+            }
+        ]
     },
     {
         "id": 3,
@@ -42,7 +82,27 @@
         "storeUrl": "https://toolgenie.org/",
         "storeLabel": "Open ToolGenie",
         "siteUrl": null,
-        "featured": true
+        "featured": true,
+        "seoTitle": "ToolGenie — Free Browser Tools, Nothing to Install",
+        "seoDescription": "ToolGenie is a large set of free utilities that run entirely in your browser: generators, converters, calculators, developer tools, PDF and image tools.",
+        "features": [
+            {
+                "title": "Runs in the browser",
+                "text": "Nothing to download and nothing to install."
+            },
+            {
+                "title": "A large collection",
+                "text": "Generators, converters, calculators and developer tools in one place."
+            },
+            {
+                "title": "PDF and image tools",
+                "text": "Work with documents and pictures without another app."
+            },
+            {
+                "title": "Free",
+                "text": "Every tool is free to use, plus a few small games."
+            }
+        ]
     },
     {
         "id": 4,
@@ -57,7 +117,27 @@
         "storeUrl": "https://apps.apple.com/us/app/white-noise-sleep-sounds/id6762322017",
         "storeLabel": "App Store",
         "siteUrl": null,
-        "featured": false
+        "featured": false,
+        "seoTitle": "White Noise — Sleep Sounds for iPhone and iPad",
+        "seoDescription": "27 sounds you can layer into your own mix — rain, fans, nature and colored noise — with a sleep timer and home-screen widgets. Free on the App Store.",
+        "features": [
+            {
+                "title": "27 sounds",
+                "text": "Rain, fans, nature and colored noise."
+            },
+            {
+                "title": "Layer your own mix",
+                "text": "Combine any of the sounds into a mix that suits you."
+            },
+            {
+                "title": "Sleep timer",
+                "text": "Set it to stop on its own after you fall asleep."
+            },
+            {
+                "title": "Home-screen widgets",
+                "text": "Start a mix without opening the app."
+            }
+        ]
     },
     {
         "id": 5,
@@ -72,7 +152,27 @@
         "storeUrl": "https://apps.apple.com/us/app/biology-ai-study-solver/id6788437564",
         "storeLabel": "App Store",
         "siteUrl": null,
-        "featured": false
+        "featured": false,
+        "seoTitle": "Biology AI: Study Solver for iPhone",
+        "seoDescription": "Point your camera at one biology question and get a step-by-step explanation, a short quiz and flashcards built from it. Free on the App Store.",
+        "features": [
+            {
+                "title": "Scan one question",
+                "text": "Point the camera at a biology question to get started."
+            },
+            {
+                "title": "Step-by-step explanation",
+                "text": "See how the answer is reached, not only the answer."
+            },
+            {
+                "title": "A short quiz",
+                "text": "Check whether the explanation actually stuck."
+            },
+            {
+                "title": "Flashcards",
+                "text": "Built from the same question, ready to revise later."
+            }
+        ]
     },
     {
         "id": 6,
@@ -87,7 +187,27 @@
         "storeUrl": "https://apps.apple.com/us/app/sokoban-toybox-daily-puzzle/id6798825057",
         "storeLabel": "App Store",
         "siteUrl": null,
-        "featured": false
+        "featured": false,
+        "seoTitle": "Sokoban Toybox — Daily Box-Pushing Puzzle",
+        "seoDescription": "60 levels plus a fresh daily puzzle, unlimited undo and dead-corner warnings. No ads, no in-app purchases and no timers. Free on iPhone and iPad.",
+        "features": [
+            {
+                "title": "60 levels",
+                "text": "A full set of hand-made box-pushing puzzles."
+            },
+            {
+                "title": "A fresh puzzle each day",
+                "text": "A new daily level, every day."
+            },
+            {
+                "title": "Unlimited undo",
+                "text": "Step back as far as you like, with dead-corner warnings to help."
+            },
+            {
+                "title": "No ads, no timers",
+                "text": "No advertising and no in-app purchases."
+            }
+        ]
     },
     {
         "id": 7,
@@ -102,6 +222,26 @@
         "storeUrl": "https://apps.apple.com/app/id6759438989",
         "storeLabel": "App Store",
         "siteUrl": null,
-        "featured": false
+        "featured": false,
+        "seoTitle": "Islam — Prayer Times, Qibla and Duas for iPhone",
+        "seoDescription": "Accurate prayer times, a Qibla compass, the Hijri calendar, duas and a home-screen countdown widget. No ads and no accounts. Free on iPhone and iPad.",
+        "features": [
+            {
+                "title": "Accurate prayer times",
+                "text": "The five daily prayer times where you are."
+            },
+            {
+                "title": "Qibla compass",
+                "text": "Find the direction of prayer."
+            },
+            {
+                "title": "Hijri calendar and duas",
+                "text": "The Islamic calendar and a collection of duas."
+            },
+            {
+                "title": "Countdown widget",
+                "text": "See the next prayer from the home screen. No ads, no accounts."
+            }
+        ]
     }
 ]

@@ -11,10 +11,7 @@ import ScrollToTop from '../components/ScrollToTop.jsx';
 const Apps = () => {
     return (
         <React.Fragment>
-            <SEO
-                title="Apps - CodeUnity"
-                description="Every app CodeUnity has shipped for iPhone, Mac and the web — including Pocket AI, LLM Radar and ToolGenie. Download links for all of them in one place."
-            />
+            <SEO path="/apps" />
             <Header />
             <Breadcrumb
                 image="images/bg/breadcrumb-bg-three.jpg"

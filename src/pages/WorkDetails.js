@@ -15,7 +15,7 @@ const WorkDetails = ({match: {params: {id}}}) => {
     const data = WorkData.filter(work => work.id === workId);
     return (
         <React.Fragment>
-            <SEO title="Exomac || Work Details" />
+            <SEO title="Work | CodeUnity" noindex={true} />
             <Header />
             <Breadcrumb 
                 image="images/bg/breadcrumb-bg-two.jpg"
