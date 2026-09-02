@@ -77,22 +77,6 @@
     {
       "source": "/apps/islam",
       "destination": "/apps/islam/index.html"
-    },
-    {
-      "source": "/work-details/:id",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/blog-details/:id",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/tag/:slug",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/category/:slug",
-      "destination": "/index.html"
     }
   ],
   "headers": [
@@ -118,6 +102,22 @@
   "routes": [
     {
       "handle": "filesystem"
+    },
+    {
+      "src": "/work-details/[^/]+",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/blog-details/[^/]+",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/tag/[^/]+",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/category/[^/]+",
+      "dest": "/index.html"
     },
     {
       "src": "/(.*)",
