@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import SectionTitle from '../../components/SectionTitles/SectionTitle';
 import ModalVideo from "react-modal-video";
+import { trackVideoPlay } from "../../utils/analytics";
 import Parallax from 'parallax-js';
 
 const Video = () => {
@@ -29,7 +30,7 @@ const Video = () => {
                     title="A full-service creative agency since 2007"
                 />
 
-                <button className="play-btn icon video-popup" onClick={()=> setOpen(true)}><i className="fas fa-play"></i></button>
+                <button className="play-btn icon video-popup" onClick={()=> { trackVideoPlay("body"); setOpen(true); }}><i className="fas fa-play"></i></button>
                 <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="eS9Qm4AOOBY" onClose={() => setOpen(false)}/>
 
             </div>

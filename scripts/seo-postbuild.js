@@ -244,6 +244,84 @@ for (const [route, page] of Object.entries(allRoutes)) {
     written.push(route);
 }
 
+// ---------------------------------------------------------------- 404
+
+// Without this, Vercel answers every unknown path with the SPA shell and a 200,
+// which Google records as a soft 404 and keeps re-crawling.
+fs.writeFileSync(path.join(BUILD, '404.html'), render('/404', {
+    title: 'Page not found | CodeUnity',
+    description: 'That page does not exist. Every app CodeUnity has shipped is listed on one page.',
+    heading: 'Page not found',
+    noindex: true
+}));
+
+// ---------------------------------------------------------------- llms.txt
+
+// https://llmstxt.org - a plain-text map of the site for language models, which
+// mostly do not run JavaScript. Generated from the same data as everything else.
+const llmsTxt = [
+    '# CodeUnity',
+    '',
+    `> ${pages['/'].description}`,
+    '',
+    'CodeUnity is an independent software studio. It builds and maintains the apps below,',
+    'and takes on iOS, macOS and web consulting work. Every app page lists the platform,',
+    'the price and where to download it.',
+    '',
+    '## Apps',
+    '',
+    ...apps.map((app) => `- [${app.name}](${SITE_URL}/apps/${app.slug}): ${app.tagline}. ${app.platform}. ${app.price}. Download: ${app.storeUrl}`),
+    '',
+    '## Pages',
+    '',
+    `- [All apps](${SITE_URL}/apps): ${pages['/apps'].description}`,
+    `- [Services](${SITE_URL}/service): ${pages['/service'].description}`,
+    `- [About](${SITE_URL}/about): ${pages['/about'].description}`,
+    `- [Contact](${SITE_URL}/contact): ${pages['/contact'].description}`,
+    '',
+    '## Optional',
+    '',
+    `- [Full site text](${SITE_URL}/llms-full.txt): every app description and feature list in one file.`,
+    ''
+].join('\n');
+
+fs.writeFileSync(path.join(BUILD, 'llms.txt'), llmsTxt);
+
+const llmsFullTxt = [
+    '# CodeUnity - full site text',
+    '',
+    `> ${pages['/'].description}`,
+    '',
+    `Source: ${SITE_URL}/  |  Last updated: ${new Date().toISOString().slice(0, 10)}`,
+    '',
+    '## Apps',
+    '',
+    ...apps.flatMap((app) => [
+        `### ${app.name}`,
+        '',
+        `URL: ${SITE_URL}/apps/${app.slug}`,
+        `Tagline: ${app.tagline}`,
+        `Platform: ${app.platform}`,
+        `Category: ${app.category}`,
+        `Price: ${app.price}`,
+        `Download: ${app.storeUrl}`,
+        ...(app.siteUrl ? [`Website: ${app.siteUrl}`] : []),
+        '',
+        app.desc,
+        '',
+        ...(app.features || []).flatMap((f) => [`- ${f.title}: ${f.text}`]),
+        ''
+    ]),
+    '## Consulting',
+    '',
+    pages['/service'].description,
+    '',
+    `Contact: ${SITE_URL}/contact`,
+    ''
+].join('\n');
+
+fs.writeFileSync(path.join(BUILD, 'llms-full.txt'), llmsFullTxt);
+
 // ---------------------------------------------------------------- sitemap
 
 const priorities = {'/': '1.0', '/apps': '0.9', '/service': '0.7', '/about': '0.6', '/contact': '0.6'};
@@ -268,4 +346,5 @@ fs.writeFileSync(
 );
 
 console.log(`[seo] wrote ${written.length} route pages: ${written.join(', ')}`);
+console.log(`[seo] wrote 404.html, llms.txt (${apps.length} apps) and llms-full.txt`);
 console.log(`[seo] wrote sitemap.xml with ${urls.split('\n').length} indexable urls`);

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {Link} from "react-router-dom";
 import ModalVideo from "react-modal-video";
+import { trackVideoPlay } from "../../utils/analytics";
 
 
 
@@ -55,7 +56,7 @@ const HomeSkillWithVideo = () => {
                         <div className="video-popup-area">
                             <div className="skill-video">
                                 <img className="image" src={process.env.PUBLIC_URL + "/images/video/skill-video.jpg"} alt="video popup" />
-                                <button className="icon" onClick={()=> setOpen(true)}><i className="fas fa-play"></i></button>
+                                <button className="icon" onClick={()=> { trackVideoPlay("body"); setOpen(true); }}><i className="fas fa-play"></i></button>
                                 <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="eS9Qm4AOOBY" onClose={() => setOpen(false)}/>
                             </div>
 

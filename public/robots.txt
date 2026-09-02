@@ -1,5 +1,10 @@
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
 Allow: /
+
+# Leftover template routes (/work, /blog-grid, /blog-classic and the /home-*
+# duplicates) are deliberately NOT disallowed here. They carry a noindex robots
+# meta tag instead, and a crawler has to fetch a page to see that tag.
 
 Sitemap: https://www.codeunity.in/sitemap.xml

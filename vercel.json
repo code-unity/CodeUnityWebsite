@@ -76,7 +76,19 @@
       "destination": "/apps/islam/index.html"
     },
     {
-      "source": "/(.*)",
+      "source": "/work-details/:id",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog-details/:id",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/tag/:slug",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/category/:slug",
       "destination": "/index.html"
     }
   ],

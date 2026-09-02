@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link} from "react-router-dom";
+import {trackAppView, trackStoreClick} from "../../utils/analytics";
 import AppsData from '../../data/apps/apps.json';
 import AppCard from '../../components/Apps/AppCard.jsx';
 import SectionTitle from '../../components/SectionTitles/ContactSectionTitle';
@@ -9,6 +10,10 @@ const initialsOf = (name) => name.replace(/[^A-Za-z ]/g, '').split(' ').filter(B
 
 const AppDetail = ({ app }) => {
     const others = AppsData.filter(other => other.slug !== app.slug).slice(0, 3);
+
+    useEffect(() => {
+        trackAppView(app.slug);
+    }, [app.slug]);
 
     return (
         <React.Fragment>
@@ -28,12 +33,25 @@ const AppDetail = ({ app }) => {
                                     <li>{app.category}</li>
                                     <li>{app.price}</li>
                                 </ul>
-                                <div className="app-card__actions">
-                                    <a className="app-card__btn" href={app.storeUrl} target="_blank" rel="noopener noreferrer">
+                                {/* Skipped by the delegated listener: both links fire their own named event. */}
+                                <div className="app-card__actions" data-analytics-skip>
+                                    <a
+                                        className="app-card__btn"
+                                        href={app.storeUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => trackStoreClick({slug: app.slug, placement: "app_detail_top", destination: "store", label: app.storeLabel})}
+                                    >
                                         {app.storeLabel}
                                     </a>
                                     {app.siteUrl && (
-                                        <a className="app-card__link" href={app.siteUrl} target="_blank" rel="noopener noreferrer">
+                                        <a
+                                            className="app-card__link"
+                                            href={app.siteUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={() => trackStoreClick({slug: app.slug, placement: "app_detail_top", destination: "website", label: "Website"})}
+                                        >
                                             Website
                                         </a>
                                     )}
@@ -60,7 +78,14 @@ const AppDetail = ({ app }) => {
                         )}
 
                         <div className="app-detail__footer">
-                            <a className="app-card__btn" href={app.storeUrl} target="_blank" rel="noopener noreferrer">
+                            <a
+                                className="app-card__btn"
+                                href={app.storeUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-analytics-skip
+                                onClick={() => trackStoreClick({slug: app.slug, placement: "app_detail_footer", destination: "store", label: app.storeLabel})}
+                            >
                                 {app.storeLabel}
                             </a>
                             <Link className="app-card__link" to={process.env.PUBLIC_URL + "/apps"}>

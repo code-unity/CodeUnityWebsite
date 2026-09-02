@@ -2,6 +2,7 @@ import {useEffect} from "react";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import AOS from "aos";
 import NavScrollTop from './components/NavScrollTop';
+import Analytics from './components/Analytics/Analytics';
 import HomeOne from './pages/HomeOne';
 import HomeTwo from './pages/HomeTwo';
 import HomeThree from './pages/HomeThree';
@@ -38,6 +39,7 @@ function App() {
   }, [])
   return (
       <Router>
+        <Analytics />
         <NavScrollTop>
             <Routes>
               <Route path={`${process.env.PUBLIC_URL + "/"}`} element={<HomeOne/>}/>
