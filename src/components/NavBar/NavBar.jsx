@@ -16,6 +16,9 @@ const NavBar = () => {
                     </ul> */}
                 </li>
                 <li>
+                    <NavLink to={process.env.PUBLIC_URL + "/apps"}><span className="menu-text">Apps</span></NavLink>
+                </li>
+                <li>
                     <NavLink to={process.env.PUBLIC_URL + "/about"}><span className="menu-text">About Us</span></NavLink>
                 </li>
                 <li>

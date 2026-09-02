@@ -2,6 +2,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 import Header from "../partials/header/Header";
 import IntroSlider from '../container/IntroSlider/IntroSlider';
+import AppsShowcase from '../container/Apps/AppsShowcase';
 import HomeAbout from '../components/About/HomeAbout.jsx';
 import ServiceIconBox from '../container/service/ServiceIconBox';
 // import HomeSuccess from '../components/Success/HomeSuccess';
@@ -17,10 +18,21 @@ import ScrollToTop from '../components/ScrollToTop.jsx';
 const HomeOne = () => {
     return (
         <React.Fragment>
-            <SEO title="CodeUnity" />
+            <SEO
+                title="CodeUnity — Apps for iPhone, Mac and the web"
+                description="CodeUnity builds small, focused apps — Pocket AI for offline on-device chat, LLM Radar for local AI on the Mac, ToolGenie for free browser tools, and more. Download them all here."
+            />
             <Header />
             <IntroSlider />
+            {/* Apps come first: they are what the studio is known for. */}
+            <AppsShowcase
+                title="OUR APPS"
+                subTitle="Small, focused apps for iPhone, Mac and the web. No ads, no accounts you do not need."
+                featuredOnly={true}
+                showAllLink={true}
+            />
             <HomeAbout />
+            {/* Consulting stays on the page, but below the products. */}
             <ServiceIconBox classOption="bg-color-1" />
             {/* <HomeSuccess /> */}
             {/* <Portfolio /> */}
@@ -34,6 +46,3 @@ const HomeOne = () => {
 }
 
 export default HomeOne;
-
-
-

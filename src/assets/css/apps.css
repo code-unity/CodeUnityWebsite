@@ -1,0 +1,132 @@
+/* Apps showcase — cards used on the homepage and the /apps page. */
+
+.app-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 30px;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.app-card__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.app-card__icon {
+  flex: 0 0 72px;
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.app-card__icon--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1292ee, #0b6fb8);
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.app-card__heading {
+  min-width: 0;
+}
+
+.app-card__title {
+  margin: 0 0 4px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.app-card__tagline {
+  margin: 0;
+  font-size: 14px;
+  color: #1292ee;
+}
+
+.app-card__desc {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.app-card__meta {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.app-card__meta li {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-color: #f4f5f7;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+.app-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: auto;
+}
+
+.app-card__btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 6px;
+  background-color: #1292ee;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.app-card__btn:hover,
+.app-card__btn:focus {
+  background-color: #0b6fb8;
+  color: #ffffff;
+}
+
+.app-card__link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a4a4a;
+  text-decoration: underline;
+}
+
+.app-card__link:hover,
+.app-card__link:focus {
+  color: #1292ee;
+}
+
+@media (max-width: 575px) {
+  .app-card {
+    padding: 24px;
+  }
+
+  .app-card__icon {
+    flex-basis: 60px;
+    width: 60px;
+    height: 60px;
+  }
+}
