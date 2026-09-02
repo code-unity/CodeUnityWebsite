@@ -3,116 +3,121 @@
   "framework": null,
   "buildCommand": "npm run vercel-build",
   "outputDirectory": "build",
-  "trailingSlash": false,
-  "redirects": [
+  "routes": [
     {
-      "source": "/home-one",
-      "destination": "/",
-      "permanent": true
+      "src": "^/home-one$",
+      "status": 308,
+      "headers": {
+        "Location": "/"
+      }
     },
     {
-      "source": "/home-two",
-      "destination": "/",
-      "permanent": true
+      "src": "^/home-two$",
+      "status": 308,
+      "headers": {
+        "Location": "/"
+      }
     },
     {
-      "source": "/home-three",
-      "destination": "/",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/apps",
-      "destination": "/apps/index.html"
+      "src": "^/home-three$",
+      "status": 308,
+      "headers": {
+        "Location": "/"
+      }
     },
     {
-      "source": "/about",
-      "destination": "/about/index.html"
+      "src": "^/static/(.*)$",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      },
+      "continue": true
     },
     {
-      "source": "/service",
-      "destination": "/service/index.html"
+      "src": "^/(.*)$",
+      "headers": {
+        "X-Content-Type-Options": "nosniff"
+      },
+      "continue": true
     },
     {
-      "source": "/contact",
-      "destination": "/contact/index.html"
+      "src": "^/apps$",
+      "dest": "/apps/index.html"
     },
     {
-      "source": "/work",
-      "destination": "/work/index.html"
+      "src": "^/about$",
+      "dest": "/about/index.html"
     },
     {
-      "source": "/blog-grid",
-      "destination": "/blog-grid/index.html"
+      "src": "^/service$",
+      "dest": "/service/index.html"
     },
     {
-      "source": "/blog-classic",
-      "destination": "/blog-classic/index.html"
+      "src": "^/contact$",
+      "dest": "/contact/index.html"
     },
     {
-      "source": "/apps/pocket-ai",
-      "destination": "/apps/pocket-ai/index.html"
+      "src": "^/work$",
+      "dest": "/work/index.html"
     },
     {
-      "source": "/apps/llm-radar",
-      "destination": "/apps/llm-radar/index.html"
+      "src": "^/blog-grid$",
+      "dest": "/blog-grid/index.html"
     },
     {
-      "source": "/apps/toolgenie",
-      "destination": "/apps/toolgenie/index.html"
+      "src": "^/blog-classic$",
+      "dest": "/blog-classic/index.html"
     },
     {
-      "source": "/apps/white-noise",
-      "destination": "/apps/white-noise/index.html"
+      "src": "^/apps/pocket-ai$",
+      "dest": "/apps/pocket-ai/index.html"
     },
     {
-      "source": "/apps/biology-ai",
-      "destination": "/apps/biology-ai/index.html"
+      "src": "^/apps/llm-radar$",
+      "dest": "/apps/llm-radar/index.html"
     },
     {
-      "source": "/apps/sokoban",
-      "destination": "/apps/sokoban/index.html"
+      "src": "^/apps/toolgenie$",
+      "dest": "/apps/toolgenie/index.html"
     },
     {
-      "source": "/apps/islam",
-      "destination": "/apps/islam/index.html"
+      "src": "^/apps/white-noise$",
+      "dest": "/apps/white-noise/index.html"
     },
     {
-      "source": "/work-details/:id",
-      "destination": "/index.html"
+      "src": "^/apps/biology-ai$",
+      "dest": "/apps/biology-ai/index.html"
     },
     {
-      "source": "/blog-details/:id",
-      "destination": "/index.html"
+      "src": "^/apps/sokoban$",
+      "dest": "/apps/sokoban/index.html"
     },
     {
-      "source": "/tag/:slug",
-      "destination": "/index.html"
+      "src": "^/apps/islam$",
+      "dest": "/apps/islam/index.html"
     },
     {
-      "source": "/category/:slug",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/static/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
+      "handle": "filesystem"
     },
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        }
-      ]
+      "src": "^/work-details/[^/]+$",
+      "dest": "/index.html"
+    },
+    {
+      "src": "^/blog-details/[^/]+$",
+      "dest": "/index.html"
+    },
+    {
+      "src": "^/tag/[^/]+$",
+      "dest": "/index.html"
+    },
+    {
+      "src": "^/category/[^/]+$",
+      "dest": "/index.html"
+    },
+    {
+      "src": "^/(.*)$",
+      "dest": "/404.html",
+      "status": 404
     }
   ]
 }
