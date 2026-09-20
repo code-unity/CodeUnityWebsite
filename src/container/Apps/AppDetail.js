@@ -35,15 +35,18 @@ const AppDetail = ({ app }) => {
                                 </ul>
                                 {/* Skipped by the delegated listener: both links fire their own named event. */}
                                 <div className="app-card__actions" data-analytics-skip>
-                                    <a
-                                        className="app-card__btn"
-                                        href={app.storeUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        onClick={() => trackStoreClick({slug: app.slug, placement: "app_detail_top", destination: "store", label: app.storeLabel})}
-                                    >
-                                        {app.storeLabel}
-                                    </a>
+                                    {app.unreleased
+                                        ? <span className="app-card__btn app-card__btn--soon">{app.storeLabel}</span>
+                                        : <a
+                                            className="app-card__btn"
+                                            href={app.storeUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={() => trackStoreClick({slug: app.slug, placement: "app_detail_top", destination: "store", label: app.storeLabel})}
+                                        >
+                                            {app.storeLabel}
+                                        </a>
+                                    }
                                     {app.siteUrl && (
                                         <a
                                             className="app-card__link"
@@ -78,16 +81,19 @@ const AppDetail = ({ app }) => {
                         )}
 
                         <div className="app-detail__footer">
-                            <a
-                                className="app-card__btn"
-                                href={app.storeUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                data-analytics-skip
-                                onClick={() => trackStoreClick({slug: app.slug, placement: "app_detail_footer", destination: "store", label: app.storeLabel})}
-                            >
-                                {app.storeLabel}
-                            </a>
+                            {app.unreleased
+                                ? <span className="app-card__btn app-card__btn--soon">{app.storeLabel}</span>
+                                : <a
+                                    className="app-card__btn"
+                                    href={app.storeUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    data-analytics-skip
+                                    onClick={() => trackStoreClick({slug: app.slug, placement: "app_detail_footer", destination: "store", label: app.storeLabel})}
+                                >
+                                    {app.storeLabel}
+                                </a>
+                            }
                             <Link className="app-card__link" to={process.env.PUBLIC_URL + "/apps"}>
                                 See all CodeUnity apps
                             </Link>

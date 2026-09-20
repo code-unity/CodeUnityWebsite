@@ -57,14 +57,16 @@ const operatingSystemOf = (app) => {
     return 'iOS';
 };
 
-const softwareApplication = (app) => {
+const softwareApplication = (app, route) => {
     const node = {
         '@type': 'SoftwareApplication',
         name: app.name,
         description: app.desc,
         applicationCategory: app.category,
         operatingSystem: operatingSystemOf(app),
-        url: app.siteUrl || app.storeUrl,
+        // An app still in development has neither a store nor a site, so its own
+        // page is the canonical url. A null here would be invalid structured data.
+        url: app.siteUrl || app.storeUrl || (SITE_URL + route),
         publisher: {'@id': SITE_URL + '/#organization'}
     };
     if (app.icon) node.image = SITE_URL + app.icon;
@@ -103,7 +105,7 @@ function jsonLdFor(route, page) {
     if (page.app) {
         graph.push(Object.assign(
             {'@id': SITE_URL + route + '#app'},
-            softwareApplication(page.app)
+            softwareApplication(page.app, route)
         ));
         graph.push({
             '@type': 'BreadcrumbList',

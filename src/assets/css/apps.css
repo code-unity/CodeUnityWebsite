@@ -107,6 +107,20 @@
   color: #ffffff;
 }
 
+/* An app still in development has no store link, so its badge is a <span>, not a
+   button. It must not look clickable: muted fill, default cursor, no hover. */
+.app-card__btn--soon {
+  background-color: #eceff3;
+  color: #5b6673;
+  cursor: default;
+}
+
+.app-card__btn--soon:hover,
+.app-card__btn--soon:focus {
+  background-color: #eceff3;
+  color: #5b6673;
+}
+
 .app-card__link {
   font-size: 14px;
   font-weight: 600;

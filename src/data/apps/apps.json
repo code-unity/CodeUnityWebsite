@@ -243,5 +243,41 @@
                 "text": "See the next prayer from the home screen. No ads, no accounts."
             }
         ]
+    },
+    {
+        "id": 8,
+        "slug": "drift",
+        "name": "Drift",
+        "tagline": "Friction that changes every week",
+        "desc": "Every focus app stops working after about three weeks, because your thumb learns the button. Drift moves the button. The pause in front of your distracting apps changes on a schedule, so the habit never gets a fixed obstacle to beat.",
+        "platform": "iPhone · iOS 17+",
+        "category": "Productivity",
+        "price": "In development",
+        "icon": null,
+        "storeUrl": null,
+        "storeLabel": "Coming soon",
+        "siteUrl": null,
+        "featured": false,
+        "unreleased": true,
+        "seoTitle": "Drift — Screen Time Blocker With Friction That Changes",
+        "seoDescription": "Drift is an iPhone screen-time blocker whose friction changes every week, so your brain never learns to beat it. In development.",
+        "features": [
+            {
+                "title": "The friction moves",
+                "text": "A wait, a typed sentence, a breathing pause — a different one each week, so it never becomes muscle memory."
+            },
+            {
+                "title": "It tells you when it breaks",
+                "text": "iOS can switch Screen Time off after an update. Drift checks four times over and says so, instead of failing quietly."
+            },
+            {
+                "title": "Rewards, not guilt",
+                "text": "A week under budget steps the friction back down. No dying trees, no shame numbers."
+            },
+            {
+                "title": "Stays on your iPhone",
+                "text": "No account, no sync, no ads. An app about attention should not sell attention."
+            }
+        ]
     }
 ]

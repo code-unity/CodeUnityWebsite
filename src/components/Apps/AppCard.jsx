@@ -31,15 +31,20 @@ const AppCard = ({ data }) => {
 
             {/* Skipped by the delegated listener: both links fire their own named event. */}
             <div className="app-card__actions" data-analytics-skip>
-                <a
-                    className="app-card__btn"
-                    href={data.storeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => trackStoreClick({slug: data.slug, placement: "app_card", destination: "store", label: data.storeLabel})}
-                >
-                    {data.storeLabel}
-                </a>
+                {/* An app still in development has no store link, so it gets a badge
+                    rather than an anchor with no href. */}
+                {data.unreleased
+                    ? <span className="app-card__btn app-card__btn--soon">{data.storeLabel}</span>
+                    : <a
+                        className="app-card__btn"
+                        href={data.storeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => trackStoreClick({slug: data.slug, placement: "app_card", destination: "store", label: data.storeLabel})}
+                    >
+                        {data.storeLabel}
+                    </a>
+                }
                 <Link
                     className="app-card__link"
                     to={process.env.PUBLIC_URL + `/apps/${data.slug}`}
