@@ -42,7 +42,7 @@
         "desc": "See which local-AI runtimes are running on your Mac — Ollama, LM Studio, llama.cpp — which models are loaded, how much RAM and disk they use, and reclaim the space you are not using.",
         "platform": "macOS 14+ · Apple silicon",
         "category": "Developer tools",
-        "price": "Free to monitor · Lifetime Pro from $3",
+        "price": "Free to monitor · Lifetime Pro from $9.99",
         "icon": null,
         "storeUrl": "https://llm-radar-eta.vercel.app/",
         "storeLabel": "Get LLM Radar",
